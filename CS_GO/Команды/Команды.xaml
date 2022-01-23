@@ -47,7 +47,7 @@
             <ComboBox ItemsSource="{Binding Org}"
                       SelectedItem="{Binding SelectedCommand.Org}"
                       DisplayMemberPath="Title" Background="Wheat"/>
-            <Label Content="Основатели" Foreground="Wheat" FontFamily="Comic Sans MS" FontSize="15"/>
+            <Label Content="Капитан" Foreground="Wheat" FontFamily="Comic Sans MS" FontSize="15"/>
             <ComboBox ItemsSource="{Binding Dev}"
                       SelectedItem="{Binding SelectedCommand.Dev}"
                       DisplayMemberPath="LastName" Background="Wheat"/>
