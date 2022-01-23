@@ -1,0 +1,21 @@
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\bin\Debug\CS_GO.exe.config
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\bin\Debug\CS_GO.exe
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\bin\Debug\CS_GO.pdb
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\CS_GO.csproj.AssemblyReference.cache
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\MainWindow.g.cs
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\Команды\Команды.g.cs
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\dev.g.cs
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\К Д\К Д.g.cs
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\App.g.cs
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\CS_GO_MarkupCompile.cache
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\CS_GO_MarkupCompile.lref
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\MainWindow.baml
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\Команды\Команды.baml
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\dev.baml
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\К Д\К Д.baml
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\CS_GO.g.resources
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\CS_GO.Properties.Resources.resources
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\CS_GO.csproj.GenerateResource.cache
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\CS_GO.csproj.CoreCompileInputs.cache
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\CS_GO.exe
+C:\Users\Лев\Downloads\CS_GO-master\CS_GO-master\CS_GO\obj\Debug\CS_GO.pdb

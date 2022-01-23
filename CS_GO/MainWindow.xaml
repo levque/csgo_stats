@@ -1,0 +1,165 @@
+﻿<Window x:Class="CS_GO.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:local="clr-namespace:CS_GO"
+mc:Ignorable="d"
+Title="Faceit" Height="450" Width="800" Background=" #dc143c ">
+    <Window.Resources>
+        <ContextMenu x:Key="listMenu">
+            <MenuItem Header="Добавить" Click="AddPlayer"/>
+            <MenuItem Header="Удалить" Click="DeletePlayer"/>
+        </ContextMenu>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="71"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ListBox SelectedItem="{Binding SelectedPlayer}"
+ItemsSource="{Binding Players}"
+DisplayMemberPath="LastName"
+ContextMenu="{StaticResource listMenu}" Margin="0,261.8,-0.4,0" Grid.Row="1" Grid.ColumnSpan="2"
+>
+            <ListBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF3890E" Offset="0.838"/>
+                    <GradientStop Color="#FFEB5316" Offset="0.21"/>
+                </LinearGradientBrush>
+            </ListBox.Background>
+        </ListBox>
+        <StackPanel Orientation="Vertical" Margin="0,3,281.6,87" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF3890E" Offset="0.529"/>
+                    <GradientStop Color="#FFEB5316" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <StackPanel
+DataContext="{Binding SelectedPlayer}"
+Orientation="Vertical">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF3890E" Offset="0.529"/>
+                        <GradientStop Color="#FFEB5316" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Label Content="Карта №1" FontFamily="Comic Sans MS" FontSize="15">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3890E" Offset="0.529"/>
+                            <GradientStop Color="#FFEB5316" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <TextBox Text="{Binding FirstName}">
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3890E" Offset="0.529"/>
+                            <GradientStop Color="#FFEB5316" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <Label Content="Карта №2" FontFamily="Comic Sans MS" FontSize="15">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3890E" Offset="0.529"/>
+                            <GradientStop Color="#FFEB5316" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <TextBox Text="{Binding Patronymic}">
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3890E" Offset="0.529"/>
+                            <GradientStop Color="#FFEB5316" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <Label Content="Карта №3" FontSize="15" FontFamily="Comic Sans MS">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3890E" Offset="0.529"/>
+                            <GradientStop Color="#FFEB5316" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <TextBox Text="{Binding LastName}">
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3890E" Offset="0.529"/>
+                            <GradientStop Color="#FFEB5316" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <Label Content="Дата мероприятия" FontSize="15" FontFamily="Comic Sans MS">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFF3890E" Offset="0.529"/>
+                            <GradientStop Color="#FFEB5316" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
+                <DatePicker SelectedDate="{Binding Birthday}" FontFamily="Comic Sans MS" FontSize="14" >
+                    <DatePicker.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF2B2A03" Offset="0.627"/>
+                            <GradientStop Color="#FFD9650D" Offset="0.406"/>
+                        </LinearGradientBrush>
+                    </DatePicker.Background>
+                </DatePicker>
+            </StackPanel>
+            <Label Content="Команда" FontSize="15" FontFamily="Comic Sans MS">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2B2A03" Offset="0.627"/>
+                        <GradientStop Color="#FFD9650D" Offset="0.406"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <ComboBox ItemsSource="{Binding Command}" 
+                      SelectedItem="{Binding SelectedPlayer.Command}"
+                      DisplayMemberPath="Title" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF2B2A03" Offset="0.627"/>
+                        <GradientStop Color="#FFD9650D" Offset="0.406"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
+        </StackPanel>
+        <Button Content="Статистика" Margin="120.2,140.8,-0.4,88" Click="ClickOrg" FontFamily="Comic Sans MS" FontSize="18" Opacity="0.975" RenderTransformOrigin="0.5,0.5" BorderThickness="0,0,0,0" Grid.Column="1" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD9FF00"/>
+                    <GradientStop Color="#FFC58F2B" Offset="0.571"/>
+                    <GradientStop Color="#FF030200" Offset="0.98"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="1" Content="Команды" HorizontalAlignment="Left" Margin="120.2,0,-4.4,318" 
+                VerticalAlignment="Center" Height="102" Width="281" Click="ClickCommand" FontFamily="Comic Sans MS" FontSize="18" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF21ED14" Offset="0.919"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Кол-во раундов" HorizontalAlignment="Left" Margin="120.2,30.8,-0.4,208" VerticalAlignment="Center" 
+                Height="110" Width="277" Click="ClickDev" FontFamily="Comic Sans MS" FontSize="18" RenderTransformOrigin="0.484,0.5" FontStretch="Medium" Grid.Column="1" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDAC50B" Offset="1"/>
+                    <GradientStop Color="#FFF7A409" Offset="0.513"/>
+                    <GradientStop Color="#FF3FDD17"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

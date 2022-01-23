@@ -1,0 +1,56 @@
+﻿<Window x:Class="CS_GO.CommandWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CS_GO"
+        mc:Ignorable="d"
+        Title="Команды" Height="450" Width="800">
+    <Window.Resources>
+        <ContextMenu x:Key="listMenu">
+            <MenuItem Header="Добавить" Click="AddCommand"/>
+            <MenuItem Header="Удалить" Click="DeleteCommand"/>
+        </ContextMenu>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ListBox ItemsSource="{Binding Commands}" 
+                 SelectedItem="{Binding SelectedCommand}"
+                 DisplayMemberPath="Title"
+                 ContextMenu="{StaticResource listMenu}">
+            <ListBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFC31414" Offset="0.703"/>
+                    <GradientStop Color="#FFFF9C00" Offset="0.276"/>
+                </LinearGradientBrush>
+            </ListBox.Background>
+        </ListBox>
+        <StackPanel Grid.Column="1" >
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFFFB700" Offset="0.703"/>
+                    <GradientStop Color="#FFE71B1B" Offset="0.276"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <StackPanel DataContext="{Binding SelectedCommand}">
+                <Label Content="Название" Foreground="White" FontFamily="Comic Sans MS" FontSize="15"/>
+                <TextBox Text="{Binding Title}" Background="Wheat"/>
+            </StackPanel>
+            <Label Content="Кол-во человек" Foreground="White" FontSize="15" FontFamily="Comic Sans MS"/>
+            <ComboBox ItemsSource="{Binding Org}"
+                      SelectedItem="{Binding SelectedCommand.Org}"
+                      DisplayMemberPath="Title" Background="Wheat"/>
+            <Label Content="Основатели" Foreground="Wheat" FontFamily="Comic Sans MS" FontSize="15"/>
+            <ComboBox ItemsSource="{Binding Dev}"
+                      SelectedItem="{Binding SelectedCommand.Dev}"
+                      DisplayMemberPath="LastName" Background="Wheat"/>
+        </StackPanel>
+    </Grid>
+</Window>
